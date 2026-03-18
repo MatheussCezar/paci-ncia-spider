@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Paciência</title>
+</head>
+
+<body>
+    <header>
+        <div id="baralho"><img class="carta" src="baralho/verso.png" alt=""></div>
+        <p id="contador-pontos" style="margin-top: 20px;">pontos: 300</p>
+        <div class="montes">
+            <div class="monte"></div>
+            <div class="monte"></div>
+            <div class="monte"></div>
+            <div class="monte"></div>
+            <div class="monte"></div>
+            <div class="monte"></div>
+            <div class="monte"></div>
+            <div class="monte"></div>
+        </div>
+    </header>
+    <main>
+        <div class="colunas-de-cartas">
+            <div class="coluna" id="coluna-1">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-2">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-3">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-4">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-5">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-6">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-7">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-8">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-9">
+                <div class="espaco-para-carta"></div>
+            </div>
+            <div class="coluna" id="coluna-10">
+                <div class="espaco-para-carta"></div>
+            </div>
+        </div>
+        <div class="container">
+            <button id="start">Começar</button>
+            <div id="timer">00:00</div>
+            <button id="end">Desistir</button>
+        </div>
+    </main>
+    <div class="event hidden game-over">
+        <img src="imagemGameOver.png" alt="">
+    </div>
+
+    <div class="event hidden victory">
+        <h2 class="victory-text">VICTORY</h1>
+    </div>
+    <audio src="./sons/game-over.mp3" id="game-over-audio"></audio>
+    <audio src="./sons/victory.mp3" id="victory-audio"></audio>
+    <audio src="./sons/coluna-concluida.mp3" id="ganha-pontos"></audio>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

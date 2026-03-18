@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    display: block;
+    height: 100vh;
+    padding-top: 20px;
+    background: url(fundo2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    background: url(fundo1.png);
+    background-size: cover;
+}
+
+.montes {
+    display: flex;
+    margin-right: 70px;
+}
+
+.monte {
+    width: 85px;
+    height: 130px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background: url(baralho/pilha.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#baralho {
+    margin: 0 0 20px 68px;
+}
+
+.pilhaBaralho {
+    width: 80px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.carta {
+    width: 80px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.colunas-de-cartas {
+    display: flex;
+    height: 66vh;
+    justify-content: space-evenly;
+}
+
+.coluna {
+    position: relative;
+    width: 80px;
+    height: 300px;
+}
+
+.espaco-para-carta {
+    position: relative;
+    width: 78px;
+    height: 118px;
+    border-radius: 10px;
+    background: url(baralho/pilha.png);
+    background-size: cover;
+}
+
+
+.coluna .carta {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+#contador-pontos {
+    font-size: 60px;
+    color: white;
+}
+
+.carta:hover {
+    transform: translateY(-10px);
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#timer {
+    font-size: 60px;
+    color: white;
+}
+
+#start {
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(99, 13, 204);
+    font-size: 25px;
+}
+
+#end {
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+}
+
+#end:hover {
+    cursor: pointer;
+}
+
+#start:hover {
+    cursor: pointer;
+}
+
+.event {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.victory-text {
+    font-size: 260px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, gold, orange, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    text-shadow: 0 0 20px rgba(255, 200, 0, 0.6);
+  }
+
+.event.show {
+    opacity: 1;
+    pointer-events: all;
+    animation: pulse 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+        color: #ff3333;
+    }
+}
